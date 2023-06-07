@@ -12,7 +12,7 @@ export default function LukeSkywalker() {
 
   useEffect(() => {
     async function fetchPeople() {
-      const fetchedPeople = await getPeople(1)
+      const fetchedPeople = await getPeople(13)
       const fetchedHomeworld = await getHomeworld(fetchedPeople.homeworld)
       const fetchedStarship = await getStarship(fetchedPeople.starships[0])
       console.log(fetchedStarship)
@@ -64,11 +64,3 @@ export default function LukeSkywalker() {
     </>
   )
 }
-
-
-
-// For Starships: name, model, starship_class, max_atmosphering_speed
-// For Films: 
-
-
-
