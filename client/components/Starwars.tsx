@@ -17,7 +17,7 @@ export default function People() {
       <h1>Name: {people?.name}</h1>
       <h2>Height: {people?.height}</h2>
       <h2>Mass: {people?.mass}</h2>
-      <h2>Birth Year: {people?.hair_color}</h2>
+      <h2>Birth Year: {people?.birth_year}</h2>
     </>
   )
 }
