@@ -1,12 +1,13 @@
 import { Route, BrowserRouter as Router, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-
+import Header from "./header"
 
 
 
 function Index() {
 
   const [currentIndex, setCurrentIndex] = useState(0)
+  const characterNames = ['Luke Skywalker', 'Darth Vader', 'Obi-Wan', 'Yoda'];
 
   useEffect(() => {
     const characterLogos = document.querySelectorAll('.characterLogo')
@@ -54,39 +55,46 @@ function Index() {
     }
   }, [currentIndex])
 
+  const currentCharacterName = characterNames[currentIndex]
+
   return (
     <>
-      <h1 id="header">StarWars</h1>
-
-      <h3 id="characterName">Character Name</h3>
-
-     
-        
+      <Header />
+      <h3 id="characterName">{currentCharacterName}</h3>
           <div className="characterLogoContainer">
             <div className="arrowKeys">
               <div className="leftArrow">
                 <i className="fa-regular fa-circle-left fa-shake"></i>
               </div>
               <Link to="/luke_skywalker" >
-              <div className="characterLogo Active" id="box1">
-              </div>
+                <div className="characterLogo Active" id="box1">
+                  <img src="./lukeskywalker.jpg" alt="luke skywalker"></img>
+                </div>
               </Link>
-              <div className="characterLogo" id="box2">
-                Box 2
-              </div>
-              <div className="characterLogo" id="box3">
-                Box 3
-              </div>
-              <div className="characterLogo" id="box4">
-                Box 4
-              </div>
+              <Link to="/darth_vader" >
+                <div className="characterLogo" id="box2">
+                  <img src="./darthvader.jpeg" alt="darth vader"></img>
+                </div>
+              </Link>
+              <Link to="/obi_wan" >
+                <div className="characterLogo" id="box3">
+                  <img src="./obiwan.webp" alt="obi wan"></img>
+                </div>
+              </Link>
+              <Link to="/yoda" >
+                <div className="characterLogo" id="box4">
+                  <img src="./yoda.webp" alt="yoda"></img>
+                </div>
+              </Link>
 
               <div className="rightArrow">
                 <i className="fa-regular fa-circle-right fa-shake"></i>
               </div>
             </div>
           </div>
-    
+          <div className="audio-container">
+            <audio src="./starwars.mp3" controls autoplay/>
+          </div>
     </>
   )
 }

@@ -4,6 +4,7 @@ import { HomeworldModel } from '../../Models/homeworld'
 import { StarshipModel } from '../../Models/starship'
 import { getPeople, getHomeworld, getStarship } from '../apiClient'
 import { films } from '../Data/data'
+import Header from "./header"
 
 export default function LukeSkywalker() {
   const [people, setPeople] = useState<PeopleModel | null>(null)
@@ -26,6 +27,7 @@ export default function LukeSkywalker() {
   console.log(films)
   return (
     <>
+    <Header/>
       <h1>{people?.name}</h1>
       <h2>Height:</h2>
       <ul>
@@ -33,7 +35,7 @@ export default function LukeSkywalker() {
       </ul>
       <h2>Birth Year:</h2>
       <ul>
-        <li>{people?.mass}</li>
+        <li>{people?.birth_year}</li>
       </ul>
       <h2>Gender:</h2>
       <ul>
