@@ -7,7 +7,7 @@ import Header from "./header"
 function Index() {
 
   const [currentIndex, setCurrentIndex] = useState(0)
-  const characterNames = ['Luke Skywalker', 'Darth Vader', 'Obi-Wan', 'Chewbacca'];
+  const characterNames = ['Luke   Skywalker', 'Darth Vader', 'Obi-Wan', 'Chewbacca'];
 
   useEffect(() => {
     const characterLogos = document.querySelectorAll('.characterLogo')
@@ -93,7 +93,7 @@ function Index() {
             </div>
           </div>
           <div className="audio-container">
-            <audio src="./starwars.mp3" controls autoplay/>
+            <audio src="./starwars.mp3" controls autoPlay/>
           </div>
     </>
   )

@@ -39,16 +39,16 @@ export default function LukeSkywalker() {
 
       <div className="audioButtons">
         <button className="audioButton" onClick={() => handleAudioPlay('./chewbacca1.mp3')}>
-          <span>Click Me</span>
+        
         </button>
         <button className="audioButton" onClick={() => handleAudioPlay('./chewbacca2.mp3')}>
-          <span>Click Me</span>
+          
         </button>
         <button className="audioButton" onClick={() => handleAudioPlay('./chewbacca3.mp3')}>
-          <span>Click Me</span>
+          
         </button>
         <button className="audioButton" onClick={() => handleAudioPlay('./chewbacca4.mp3')}>
-          <span>Click Me</span>
+          
         </button>
       </div>
 
@@ -58,11 +58,11 @@ export default function LukeSkywalker() {
       </ul>
       <h2>Birth Year:</h2>
       <ul>
-        <li>{people?.mass}</li>
+        <li>{people?.birth_year}</li>
       </ul>
       <h2>Gender:</h2>
       <ul>
-        <li>{people?.birth_year}</li>
+        <li>{people?.gender}</li>
       </ul>
       <h2>Homeworld:</h2>
       <ul>
