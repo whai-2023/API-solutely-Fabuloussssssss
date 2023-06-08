@@ -1,6 +1,8 @@
+import People from './Starwars'
 import { useState, useEffect } from 'react'
 
 function App() {
+
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
@@ -51,9 +53,11 @@ function App() {
 
   return (
     <>
+      <People />
       <h1 id="header">StarWars</h1>
 
       <h3 id="characterName">Character Name</h3>
+
 
       <div className="characterLogoContainer">
         <div className="arrowKeys">
@@ -79,7 +83,7 @@ function App() {
           </div>
         </div>
       </div>
-      
+     
     </>
   )
 }
