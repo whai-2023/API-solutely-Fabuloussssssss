@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { PeopleModel } from '../../Models/people'
 import { getLuke } from '../apiClient'
+import Header from "./header"
 
 export default function LukeSkywalker() {
   const [people, setPeople] = useState<PeopleModel | null>(null)
@@ -14,10 +15,13 @@ export default function LukeSkywalker() {
   }, [])
   return (
     <>
-      <h1>Name: {people?.name}</h1>
-      <h2>Height: {people?.height}</h2>
-      <h2>Mass: {people?.mass}</h2>
-      <h2>Birth Year: {people?.birth_year}</h2>
+      <Header />
+      <div className="dataContainer">
+        <h1>Name: {people?.name}</h1>
+        <h2>Height: {people?.height}</h2>
+        <h2>Mass: {people?.mass}</h2>
+        <h2>Birth Year: {people?.birth_year}</h2>
+      </div>
     </>
   )
 }
