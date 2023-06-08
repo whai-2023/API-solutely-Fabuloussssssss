@@ -7,6 +7,7 @@ import Header from "./header"
 function Index() {
 
   const [currentIndex, setCurrentIndex] = useState(0)
+  const characterNames = ['Luke Skywalker', 'Darth Vader', 'Obi-Wan', 'Yoda'];
 
   useEffect(() => {
     const characterLogos = document.querySelectorAll('.characterLogo')
@@ -54,16 +55,12 @@ function Index() {
     }
   }, [currentIndex])
 
+  const currentCharacterName = characterNames[currentIndex]
+
   return (
     <>
-      
       <Header />
-      
-
-      <h3 id="characterName">Character Name</h3>
-
-     
-        
+      <h3 id="characterName">{currentCharacterName}</h3>
           <div className="characterLogoContainer">
             <div className="arrowKeys">
               <div className="leftArrow">
@@ -96,7 +93,7 @@ function Index() {
             </div>
           </div>
           <div className="audio-container">
-            <audio src="./starwars.mp3" controls autoplay />
+            <audio src="./starwars.mp3" controls autoplay/>
           </div>
     </>
   )
