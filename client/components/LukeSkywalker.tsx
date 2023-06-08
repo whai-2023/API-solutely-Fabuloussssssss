@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import { PeopleModel } from '../../Models/people'
-import { getPeople } from '../apiClient'
+import { getLuke } from '../apiClient'
 
 export default function LukeSkywalker() {
   const [people, setPeople] = useState<PeopleModel | null>(null)
 
   useEffect(() => {
     async function fetchPeople() {
-      const fetchedPeople = await getPeople()
+      const fetchedPeople = await getLuke()
       setPeople(fetchedPeople)
     }
     fetchPeople()
