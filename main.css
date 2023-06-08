@@ -20,8 +20,8 @@
 }
 
 .arrowKeys {
-    display:flex;
-    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 .leftArrow,
@@ -34,4 +34,21 @@
     border: 1px;
     margin: 10px;
     font-size: 34px;
+    color: brown;
+}
+
+#box1 {
+    background-color: green;
+}
+
+#box2 {
+    background-color: blue;
+}
+
+#box3 {
+    background-color: red;
+}
+
+#box4 {
+    background-color: yellow;
 }
