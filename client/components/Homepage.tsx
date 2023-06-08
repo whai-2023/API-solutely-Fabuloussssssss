@@ -68,18 +68,25 @@ function Index() {
                 <i className="fa-regular fa-circle-left fa-shake"></i>
               </div>
               <Link to="/luke_skywalker" >
-              <div className="characterLogo Active" id="box1">
-              </div>
+                <div className="characterLogo Active" id="box1">
+                  <img src=""></img>
+                </div>
               </Link>
-              <div className="characterLogo" id="box2">
-                Box 2
-              </div>
-              <div className="characterLogo" id="box3">
-                Box 3
-              </div>
-              <div className="characterLogo" id="box4">
-                Box 4
-              </div>
+              <Link to="/darth_vader" >
+                <div className="characterLogo" id="box2">
+                  <img src=""></img>
+                </div>
+              </Link>
+              <Link to="/obi_wan" >
+                <div className="characterLogo" id="box3">
+                  <img src=""></img>
+                </div>
+              </Link>
+              <Link to="/yoda" >
+                <div className="characterLogo" id="box4">
+                  <img src=""></img>
+                </div>
+              </Link>
 
               <div className="rightArrow">
                 <i className="fa-regular fa-circle-right fa-shake"></i>
