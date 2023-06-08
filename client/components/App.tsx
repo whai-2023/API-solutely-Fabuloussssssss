@@ -1,8 +1,50 @@
 import { useState, useEffect } from 'react'
 import { getGreeting } from '../apiClient'
 
-const App = () => {
+function App() {
+
+  const characterLogos = document.querySelectorAll('.characterLogo')
+  let currentIndex = 0
+
+  function showCurrentLogo() {
+    const logosArray = Array.from(characterLogos) as HTMLElement[]
+    logosArray.forEach((logo: HTMLElement, index: number) => {
+      logo.style.display = index === currentIndex ? 'block' : 'none'
+    })
+  }
   
+  
+  function showNextLogo() {
+    if (currentIndex < characterLogos.length - 1) {
+      currentIndex++
+    } else {
+      currentIndex = 0
+    }
+    showCurrentLogo()
+  }
+  
+  function showPreviousLogo() {
+    if (currentIndex > 0) {
+      currentIndex--
+    } else {
+      currentIndex = characterLogos.length - 1
+    }
+    showCurrentLogo()
+  }
+  
+  const leftArrow = document.querySelector('.leftArrow')
+  const rightArrow = document.querySelector('.rightArrow')
+  
+  if (leftArrow) {
+    leftArrow.addEventListener('click', showPreviousLogo)
+  }
+  
+  if (rightArrow) {
+    rightArrow.addEventListener('click', showNextLogo)
+  }
+  
+  
+  showCurrentLogo()
 
   return (
     <>
@@ -13,10 +55,10 @@ const App = () => {
 
    
             <div className="characterLogoContainer">
-                <div className="characterLogo">Box 1</div>
-                <div className="characterLogo">Box 2</div>
-                <div className="characterLogo">Box 3</div>
-                <div className="characterLogo">Box 4</div>
+                <div className="characterLogo Active" id="box1">Box 1</div>
+                <div className="characterLogo" id="box2">Box 2</div>
+                <div className="characterLogo" id="box3">Box 3</div>
+                <div className="characterLogo" id="box4">Box 4</div>
           </div>
           <div className="arrowKeys">
               <div className="leftArrow">
@@ -32,3 +74,4 @@ const App = () => {
 }
 
 export default App
+
