@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { PeopleModel } from '../../Models/people'
 import { getPeople } from '../apiClient'
 
-export default function People() {
+export default function LukeSkywalker() {
   const [people, setPeople] = useState<PeopleModel | null>(null)
 
   useEffect(() => {
