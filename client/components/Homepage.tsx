@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-
+import Header from "./header"
 
 
 
@@ -56,7 +56,9 @@ function Index() {
 
   return (
     <>
-      <h1 id="header">StarWars</h1>
+      
+      <Header />
+      
 
       <h3 id="characterName">Character Name</h3>
 
@@ -69,22 +71,22 @@ function Index() {
               </div>
               <Link to="/luke_skywalker" >
                 <div className="characterLogo Active" id="box1">
-                  <img src=""></img>
+                  <img src="./lukeskywalker.jpg" alt="luke skywalker"></img>
                 </div>
               </Link>
               <Link to="/darth_vader" >
                 <div className="characterLogo" id="box2">
-                  <img src=""></img>
+                  <img src="./darthvader.jpeg" alt="darth vader"></img>
                 </div>
               </Link>
               <Link to="/obi_wan" >
                 <div className="characterLogo" id="box3">
-                  <img src=""></img>
+                  <img src="./obiwan.webp" alt="obi wan"></img>
                 </div>
               </Link>
               <Link to="/yoda" >
                 <div className="characterLogo" id="box4">
-                  <img src=""></img>
+                  <img src="./yoda.webp" alt="yoda"></img>
                 </div>
               </Link>
 
@@ -93,7 +95,9 @@ function Index() {
               </div>
             </div>
           </div>
-    
+          <div className="audio-container">
+            <audio src="./starwars.mp3" controls autoplay />
+          </div>
     </>
   )
 }
