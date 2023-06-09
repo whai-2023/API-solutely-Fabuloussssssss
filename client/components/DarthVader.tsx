@@ -58,11 +58,11 @@ export default function LukeSkywalker() {
       </ul>
       <h2>Birth Year:</h2>
       <ul>
-        <li>{people?.mass}</li>
+        <li>{people?.birth_year}</li>
       </ul>
       <h2>Gender:</h2>
       <ul>
-        <li>{people?.birth_year}</li>
+        <li>{people?.gender}</li>
       </ul>
       <h2>Homeworld:</h2>
       <ul>
