@@ -28,7 +28,7 @@ export default function LukeSkywalker() {
   return (
     <>
     <Header/>
-      <h1>{people?.name}</h1>
+    <div className="characterBody">
       <h2>Height:</h2>
       <ul>
         <li>{people?.height}</li>
@@ -63,6 +63,8 @@ export default function LukeSkywalker() {
             return <li key={filmURL}>{films[Number(index)-1]}</li>
           })}
           </ul> 
+      </div>
+      
     </>
   )
 }

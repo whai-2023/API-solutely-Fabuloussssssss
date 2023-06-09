@@ -7,7 +7,7 @@ import Header from "./header"
 function Index() {
 
   const [currentIndex, setCurrentIndex] = useState(0)
-  const characterNames = ['Luke Skywalker', 'Darth Vader', 'Obi-Wan', 'Yoda'];
+  const characterNames = ['Luke Skywalker', 'Darth Vader', 'Obi-Wan', 'Chewbacca'];
 
   useEffect(() => {
     const characterLogos = document.querySelectorAll('.characterLogo')
@@ -68,22 +68,22 @@ function Index() {
               </div>
               <Link to="/luke_skywalker" >
                 <div className="characterLogo Active" id="box1">
-                  <img src="./lukeskywalker.jpg" alt="luke skywalker"></img>
+                  <img src="./luke.gif" alt="luke skywalker"></img>
                 </div>
               </Link>
               <Link to="/darth_vader" >
                 <div className="characterLogo" id="box2">
-                  <img src="./darthvader.jpeg" alt="darth vader"></img>
+                  <img src="./darthvader.gif" alt="darth vader"></img>
                 </div>
               </Link>
               <Link to="/obi_wan" >
                 <div className="characterLogo" id="box3">
-                  <img src="./obiwan.webp" alt="obi wan"></img>
+                  <img src="./obiwan.gif" alt="obi wan"></img>
                 </div>
               </Link>
-              <Link to="/yoda" >
+              <Link to="/chewbacca" >
                 <div className="characterLogo" id="box4">
-                  <img src="./yoda.webp" alt="yoda"></img>
+                  <img src="./chewbaca.gif" alt="chewbacca"></img>
                 </div>
               </Link>
 
