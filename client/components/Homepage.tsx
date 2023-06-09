@@ -7,7 +7,7 @@ import Header from "./header"
 function Index() {
 
   const [currentIndex, setCurrentIndex] = useState(0)
-  const characterNames = ['Luke Skywalker', 'Darth Vader', 'Obi-Wan', 'Yoda'];
+  const characterNames = ['Luke Skywalker', 'Darth Vader', 'Obi-Wan', 'Yoda']
 
   useEffect(() => {
     const characterLogos = document.querySelectorAll('.characterLogo')

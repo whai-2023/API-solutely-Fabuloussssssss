@@ -13,6 +13,12 @@ export default function Yoda() {
     }
     fetchPeople()
   }, [])
+
+  const handleAudioPlay = (audioSrc: string) => {
+    const audio = new Audio(audioSrc)
+    audio.play()
+  }
+
   return (
     <>
       <Header />
@@ -21,6 +27,20 @@ export default function Yoda() {
         <h2>Height: {people?.height}</h2>
         <h2>Mass: {people?.mass}</h2>
         <h2>Birth Year: {people?.birth_year}</h2>
+      </div>
+      <div className="audioButtons">
+        <button className="audioButton" onClick={() => handleAudioPlay('./yoda1.mp3')}>
+          <span>Click Me</span>
+        </button>
+        <button className="audioButton" onClick={() => handleAudioPlay('./yoda2.mp3')}>
+          <span>Click Me</span>
+        </button>
+        <button className="audioButton" onClick={() => handleAudioPlay('./yoda3.mp3')}>
+          <span>Click Me</span>
+        </button>
+        <button className="audioButton" onClick={() => handleAudioPlay('./yoda4.mp3')}>
+          <span>Click Me</span>
+        </button>
       </div>
     </>
   )
