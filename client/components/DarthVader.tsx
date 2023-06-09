@@ -25,11 +25,33 @@ export default function LukeSkywalker() {
   }, []) 
   console.log(people)
   console.log(films)
+
+  const handleAudioPlay = (audioSrc: string) => {
+    const audio = new Audio(audioSrc)
+    audio.play()
+  }
+
   return (
     <>
     <Header/>
       <div className="characterBody">
       <h1>{people?.name}</h1>
+
+      <div className="audioButtons">
+        <button className="audioButton" onClick={() => handleAudioPlay('./darthvader1.mp3')}>
+          <span>Click Me</span>
+        </button>
+        <button className="audioButton" onClick={() => handleAudioPlay('./darthvader2.mp3')}>
+          <span>Click Me</span>
+        </button>
+        <button className="audioButton" onClick={() => handleAudioPlay('./darthvader3.mp3')}>
+          <span>Click Me</span>
+        </button>
+        <button className="audioButton" onClick={() => handleAudioPlay('./darthvader4.mp3')}>
+          <span>Click Me</span>
+        </button>
+      </div>
+
       <h2>Height:</h2>
       <ul>
         <li>{people?.height}</li>
