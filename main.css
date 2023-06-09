@@ -102,3 +102,26 @@ body, html {
   .characterBody {
     margin-top: 150px;
   }
+
+  .audioButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+  
+  .audioButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid red;
+    background-color: transparent;
+    color: red;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
