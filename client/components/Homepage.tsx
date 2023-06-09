@@ -2,12 +2,13 @@ import { Route, BrowserRouter as Router, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Header from "./header"
 
+                
 
 
 function Index() {
 
   const [currentIndex, setCurrentIndex] = useState(0)
-  const characterNames = ['Luke Skywalker', 'Darth Vader', 'Obi-Wan', 'Chewbacca'];
+  const characterNames = ['Luke Skywalker', 'Darth Vader', 'obi-Wan', 'Chewbacca'];
 
   useEffect(() => {
     const characterLogos = document.querySelectorAll('.characterLogo')
