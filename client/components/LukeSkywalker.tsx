@@ -38,21 +38,6 @@ export default function LukeSkywalker() {
     <div className="characterBody">
       <h1>{people?.name}</h1>
 
-      <div className="audioButtons">
-        <button className="audioButton" onClick={() => handleAudioPlay('./Luke1.mp3')}>
-          <span>Click Me</span>
-        </button>
-        <button className="audioButton" onClick={() => handleAudioPlay('./Luke2.mp3')}>
-          <span>Click Me</span>
-        </button>
-        <button className="audioButton" onClick={() => handleAudioPlay('./Luke3.mp3')}>
-          <span>Click Me</span>
-        </button>
-        <button className="audioButton" onClick={() => handleAudioPlay('./Luke4.mp3')}>
-          <span>Click Me</span>
-        </button>
-      </div>
-
       <h2>Height:</h2>
       <ul>
         <li>{people?.height}</li>
@@ -86,8 +71,24 @@ export default function LukeSkywalker() {
             console.log(index)
             return <li key={filmURL}>{films[Number(index)-1]}</li>
           })}
-          </ul> 
+        </ul> 
+
+          <div className="audioButtons">
+            <button className="audioButton" onClick={() => handleAudioPlay('./Luke1.mp3')}>
+              <img src="megaphone.png" alt="Logo 1" />
+            </button>
+            <button className="audioButton" onClick={() => handleAudioPlay('./Luke2.mp3')}>
+              <img src="megaphone.png" alt="Logo 1" />
+            </button>
+            <button className="audioButton" onClick={() => handleAudioPlay('./Luke3.mp3')}>
+              <img src="megaphone.png" alt="Logo 1" />
+            </button>
+            <button className="audioButton" onClick={() => handleAudioPlay('./Luke4.mp3')}>
+              <img src="megaphone.png" alt="Logo 1" />
+            </button>
+          </div>
       </div>
+      
     </>
   )
 }
