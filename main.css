@@ -34,10 +34,16 @@ body, html {
 
 #characterName {
     text-align: center;
-    margin-top: 150px;
-    color: white;
-    font-size: 30px;
+
+    margin-top: 180px;
+    color: rgb(194, 177, 177);
+    font-size: 50px;
+    font-family: 'Star Wars', sans-serif;
     letter-spacing: .2rem;
+    word-spacing: 15px;
+    -webkit-text-stroke: 2px rgb(240, 218, 27);
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
 }
 
 .characterLogoContainer {
