@@ -29,6 +29,7 @@ export default function LukeSkywalker() {
     <>
     <Header/>
     <div className="characterBody">
+      <h1>{people?.name}</h1>
       <h2>Height:</h2>
       <ul>
         <li>{people?.height}</li>
