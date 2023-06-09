@@ -37,19 +37,17 @@ export default function LukeSkywalker() {
       <div className="characterBody">
       <h1>{people?.name}</h1>
 
-      
-
       <h2>Height:</h2>
       <ul>
         <li>{people?.height}</li>
       </ul>
       <h2>Birth Year:</h2>
       <ul>
-        <li>{people?.mass}</li>
+        <li>{people?.birth_year}</li>
       </ul>
       <h2>Gender:</h2>
       <ul>
-        <li>{people?.birth_year}</li>
+        <li>{people?.gender}</li>
       </ul>
       <h2>Homeworld:</h2>
       <ul>

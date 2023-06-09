@@ -8,6 +8,7 @@ body, html {
     background-position: center center;
     z-index: -1;
     color: white;
+    font-family: 'Star Wars', sans-serif;
 }
 
 .header {
@@ -33,6 +34,7 @@ body, html {
 
 #characterName {
     text-align: center;
+
     margin-top: 180px;
     color: rgb(194, 177, 177);
     font-size: 50px;
@@ -125,19 +127,28 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     width: 100px;
     height: 100px;
+=======
+    width: 20px;
+    height: 20px;
+>>>>>>> cb494c3d2e1f954bdbe758fae94421292ab371ed
     border-radius: 50%;
-    border: 2px solid red;
+    border: 2px solid gold;
     background-color: transparent;
-    color: red;
+    color: gold;
     font-size: 14px;
     cursor: pointer;
     margin-right: 10px;
   }
 
+<<<<<<< HEAD
   .audioButton img {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
+=======
+  
+>>>>>>> cb494c3d2e1f954bdbe758fae94421292ab371ed
